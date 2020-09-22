@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@400;500;700;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family: 'Roboto', sans-serif;
+}
+.headerArea {
+	background: #444;
+	padding: 15px 50px;
+}
+.headerArea h2 {
+	color: #fff;
+	text-transform: uppercase;
+}
+.body__wrap {
+	display: flex;
+}
+.body__wrap__output_window {
+	width: 60%;
+	height: 93.8vh;
+}
+.body__wrap__output_window iframe{
+    height: 93.6vh;
+    width: 100%;
+    overflow: scroll;
+}
+.editor_header {
+    background: #222222;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px 30px;
+}
+.editor_header span {
+	color: #fff;
+	display: block;
+	font-weight: 700;
+}
+.editor_header button {
+	background: transparent;
+	border: 0;
+	font-size: 18px;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.body__wrap__editors {
+	background: gray;
+    width: 40%;
+    height: 93.8vh;
+}
+.code_editor {
+	width: 100%;
+	height: 26.8vh;
+	resize: none;
+}
+.ace_text-input {
+	position: initial;
+	z-index: 0;
+	width: 100% !important;
+	height: 26.8vh !important;
+}
+.ace_editor {
+	font-size: 18px !important;
+}

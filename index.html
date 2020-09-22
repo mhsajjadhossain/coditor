@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>snow js</title>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <header class="headerArea">
+        <h2> Hello Editor __ .</h2>
+    </header>
+    <div class="body__wrap">
+        
+        <div class="body__wrap__output_window">
+            <iframe id="outputWindow" frameborder="0"></iframe>
+        </div>
+        
+        <div class="body__wrap__editors">
+            <div class="single_editor">
+                <div class="editor_header">
+                    <span class="editor_title">HTML</span>
+                    <button class="expand">
+                        <i class="fa fa-expand"></i>
+                    </button>
+                </div>
+                <textarea id="htmlCode" class="code_editor html_code"></textarea>
+            </div>
+
+            <div class="single_editor">
+                <div class="editor_header">
+                    <span class="editor_title">CSS</span>
+                    <button class="expand">
+                        <i class="fa fa-expand"></i>
+                    </button>
+                </div>
+                <textarea id="cssCode" class="code_editor css_code"></textarea>
+            </div>
+
+            <div class="single_editor">
+                <div class="editor_header">
+                    <span class="editor_title">JS</span>
+                    <button class="expand">
+                        <i class="fa fa-expand"></i>
+                    </button>
+                </div>
+                <textarea id="jsCode" class="code_editor js_code"></textarea>
+            </div>
+            
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
+    <script type="module" src="js/app.js"></script>
+
+</body>
+
+</html>
