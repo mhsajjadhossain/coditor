@@ -28,7 +28,7 @@
             htmlCodeRender();
         })
     };
-    
+
 
 
     let runCss = () => {
@@ -75,11 +75,49 @@
         })
 
     }
-    
+
 
     // calling all functions
     runHtml();
     runCss();
     runJs();
+
+
+
+    // expanding editor by clicking expand button
+    let expandButtons = document.querySelectorAll('.expand');
+    let expandArray = Array.from(expandButtons);
+
+    // catch all editors
+    let allEditor = document.querySelectorAll('.ace_text-input');
+    let allEditorArray = Array.from(allEditor);
+
+    expandArray.map(button => {
+        button.addEventListener('click', () => {
+            let brotherEditor = button.parentElement.nextElementSibling.firstChild;
+
+            // removing class from other editors
+            allEditorArray.map(editor =>{
+                editor.classList.remove('activeEditor')
+                editor.classList.add('unactiveEditor')
+                brotherEditor.classList.add('activeEditor')
+                brotherEditor.classList.remove('unactiveEditor')
+            })          
+            
+        })
+    })
+
+    // unexpand all 
+    let compactBtn = document.querySelector('.compact')
+    compactBtn.addEventListener('click',()=>{
+        allEditorArray.map(editor=>{
+            editor.classList.remove('activeEditor')
+            editor.classList.remove('unactiveEditor')
+        })
+    })
+
+
+
+
 
 })();

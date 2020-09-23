@@ -44,6 +44,14 @@ h6{
 	text-transform: uppercase;
 	cursor: pointer;
 }
+button.compact {
+	width: 47px;
+	font-size: 20px;
+	height: 47px;
+	line-height: 46px;
+	padding: 0;
+	background: #f6315f;
+}
 .body__wrap {
 	display: flex;
 }
@@ -94,4 +102,11 @@ h6{
 }
 .ace_editor {
 	font-size: 18px !important;
+}
+
+.ace_text-input.unactiveEditor {
+	height: 5vh !important;
+}
+.ace_text-input.activeEditor {
+	height: 70.8vh !important;
 }
