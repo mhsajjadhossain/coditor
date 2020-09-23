@@ -3,7 +3,7 @@
     const cssCode = document.querySelector('#cssCode');
     const jsCode = document.querySelector('#jsCode');
     const outputWindow = document.querySelector('#outputWindow');
-    
+
 
     // iframe documents elements
     const outputContentWindow = outputWindow.contentWindow;
@@ -28,7 +28,7 @@
             htmlCodeRender();
         })
     };
-    runHtml();
+    
 
 
     let runCss = () => {
@@ -47,29 +47,39 @@
             let cssEditorValue = cssEditor.getValue();
             styleTag.innerHTML = cssEditorValue;
         }
-        cssEditor.addEventListener('change',()=>{
+        cssEditor.addEventListener('change', () => {
             cssCodeRender()
         })
     }
-    runCss();
 
-    let runJs = ()=>{
+    let runJs = () => {
         // this is for css editor
         const jsEditor = ace.edit(jsCode);
         jsEditor.getSession().setMode('ace/mode/javascript');
         jsEditor.setTheme('ace/theme/tomorrow_night');
 
-        // // js code rendaring function
-        // let jsRender = ()=>{
-        //     let jsEditorValue = jsEditor.getValue();
-        //     outputContentWindow.eval(jsEditorValue);
-        // }
+        // js code rendaring function
+        let jsRender = () => {
+            let jsEditorValue = jsEditor.getValue();
 
-        // jsEditor.addEventListener('change',()=>{
-        //     jsRender()
-        // })
+            try {
+                outputContentWindow.eval(jsEditorValue);
+            } catch (err) {
+                console.log(err.message);
+            }
+        }
+
+        jsEditor.addEventListener('change', () => {
+            jsRender()
+            console.log('work');
+        })
 
     }
+    
+
+    // calling all functions
+    runHtml();
+    runCss();
     runJs();
 
 })();

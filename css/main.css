@@ -16,12 +16,33 @@ h6{
     font-family: 'Roboto', sans-serif;
 }
 .headerArea {
-	background: #444;
+	background: #282a2e;
 	padding: 15px 50px;
+}
+.headerArea {
+	background: #282a2e;
+	padding: 15px 50px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 .headerArea h2 {
 	color: #fff;
 	text-transform: uppercase;
+}
+.buttonsPannel button {
+	background: #3a466b;
+	border: 0;
+	color: #fff;
+	width: 200px;
+	text-align: center;
+	padding: 15px 0;
+	font-size: 14px;
+	border-radius: 30px;
+	margin-left: 30px;
+	font-weight: 700;
+	text-transform: uppercase;
+	cursor: pointer;
 }
 .body__wrap {
 	display: flex;
